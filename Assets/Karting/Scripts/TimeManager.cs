@@ -47,8 +47,8 @@ public class TimeManager : MonoBehaviour
         TotalTime = time;
         IsFinite = isFinite;
         TimeRemaining = TotalTime;
-        Debug.Log("IsFinite: " + IsFinite);
-        Debug.Log("TimeRemaining: " + TimeRemaining);
+        //Debug.Log("IsFinite: " + IsFinite);
+        //Debug.Log("TimeRemaining: " + TimeRemaining);
     }
 
     void Update()

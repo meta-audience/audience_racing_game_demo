@@ -32,9 +32,12 @@ namespace AudienceSDK {
         private StreamState _streamState = StreamState.Unload;
         private SessionState _sessionState = SessionState.Inactive;
 
-        public Vector3 ThirdPersonPos { get; set; }
+        //public Vector3 ThirdPersonPos { get; set; }
+        private Vector3 ThirdPersonPos { get; set; }
 
-        public Vector3 ThirdPersonRot { get; set; }
+        //public Vector3 ThirdPersonRot { get; set; }
+        private Vector3 ThirdPersonRot { get; set; }
+        private GameObject ViewerCamera;
 
         public int MappingId {
             get {
@@ -239,6 +242,13 @@ namespace AudienceSDK {
                     this._accumulatedTime -= frameTime * Mathf.Floor(this._accumulatedTime / frameTime);
                 }
             }
+        }
+
+        public virtual void SetCameraBehavior(GameObject gameobject)
+        {
+            this.ThirdPersonPos = gameobject.transform.position;
+            this.ThirdPersonRot = gameobject.transform.rotation.eulerAngles;
+            //this.transform = gameobject.transform;
         }
 
         protected virtual void OnDestroy() {

@@ -15,6 +15,7 @@ namespace AudienceSDK.Sample
 
         protected override void DelayedInit(AudienceSDK.Camera camera)
         {
+            Debug.Log("----camera: " + camera.camera_name);
             base.DelayedInit(camera);
         }
 
@@ -29,13 +30,32 @@ namespace AudienceSDK.Sample
         }
         void Update()
         {
-            GameObject GamePlayer = GameObject.FindGameObjectWithTag("Player");
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "MainScene")
+            {
+                GameObject GamePlayer = GameObject.FindGameObjectWithTag("Player");
+                GameObject LookObject = GameObject.Find("EmptyObjectForViewer");
+                GameObject CameraObject = GameObject.Find("EmptyObjectForCamera");
 
-            //this.ThirdPersonRot = Quaternion.LookRotation(GamePlayer.transform.position).eulerAngles;
-            //this.ThirdPersonRot = GamePlayer.transform.rotation.eulerAngles;
-            this.transform.rotation = Quaternion.LookRotation(GamePlayer.transform.position);
-            this.ThirdPersonPos = GamePlayer.transform.position + new Vector3(0, 4, -6);
-            //this.transform.LookAt(GamePlayer.transform);
+                //this.transform.rotation = Quaternion.LookRotation(GamePlayer.transform.position);
+                this.transform.position = Vector3.Lerp(this.transform.position, CameraObject.transform.position, 2f * Time.deltaTime);
+                /*
+                if(Vector3.Distance(this.transform.position, LookObject.transform.position) > 4f)
+                {
+                    this.transform.position = Vector3.Lerp(this.transform.position, CameraObject.transform.position, 2.5f * Time.deltaTime);
+                }
+                else if (Vector3.Distance(this.transform.position, LookObject.transform.position) < 2f)
+                {
+                    this.transform.position = Vector3.Lerp(this.transform.position, CameraObject.transform.position, 3f * Time.deltaTime);
+                }
+                else
+                {
+                    this.transform.position = Vector3.Lerp(this.transform.position, CameraObject.transform.position, 1.8f * Time.deltaTime);
+                }*/
+                this.transform.LookAt(LookObject.transform);
+                
+                //Debug.Log("ThirdPersonPos:"+ this.gameObject.transform.position);
+            }
+            base.SetCameraBehavior(this.gameObject);
         }
     }
 }
