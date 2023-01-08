@@ -32,11 +32,6 @@ namespace AudienceSDK {
         private StreamState _streamState = StreamState.Unload;
         private SessionState _sessionState = SessionState.Inactive;
 
-        //public Vector3 ThirdPersonPos { get; set; }
-        private Vector3 ThirdPersonPos { get; set; }
-
-        //public Vector3 ThirdPersonRot { get; set; }
-        private Vector3 ThirdPersonRot { get; set; }
         private GameObject ViewerCamera;
 
         public int MappingId {
@@ -201,8 +196,8 @@ namespace AudienceSDK {
             gameObj.transform.localRotation = Quaternion.identity;
             gameObj.transform.localScale = Vector3.one;
 
-            this.ThirdPersonPos = new Vector3(camera.position_x, camera.position_y, camera.position_z);
-            this.ThirdPersonRot = new Vector3(camera.rotation_x, camera.rotation_y, camera.rotation_z);
+            this.transform.position = new Vector3(camera.position_x, camera.position_y, camera.position_z);
+            this.transform.eulerAngles = new Vector3(camera.rotation_x, camera.rotation_y, camera.rotation_z);
 
             var cameraAvatarRoot = new GameObject();
             cameraAvatarRoot.transform.parent = this.transform;
@@ -229,9 +224,6 @@ namespace AudienceSDK {
                 this._accumulatedTime += Time.deltaTime;
                 float frameTime = 1.0f / (float)this.RenderFrames;
 
-                this.transform.position = this.ThirdPersonPos;
-                this.transform.eulerAngles = this.ThirdPersonRot;
-
                 if (this._accumulatedTime > frameTime) {
                     this._cam.Render();
                     if (AudienceSDK.Audience.Context.SendCameraFrameNow()) {
@@ -242,13 +234,6 @@ namespace AudienceSDK {
                     this._accumulatedTime -= frameTime * Mathf.Floor(this._accumulatedTime / frameTime);
                 }
             }
-        }
-
-        public virtual void SetCameraBehavior(GameObject gameobject)
-        {
-            this.ThirdPersonPos = gameobject.transform.position;
-            this.ThirdPersonRot = gameobject.transform.rotation.eulerAngles;
-            //this.transform = gameobject.transform;
         }
 
         protected virtual void OnDestroy() {

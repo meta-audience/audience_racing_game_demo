@@ -13,10 +13,17 @@ namespace AudienceSDK.Sample
             this.DelayedInit(camera);
         }
 
+        public void SetFollowTarget(Transform target) {
+            this.transform.SetParent(target);
+            this.transform.localEulerAngles = Vector3.zero;
+            this.transform.localPosition = Vector3.zero;
+        }
+
         protected override void DelayedInit(AudienceSDK.Camera camera)
         {
             Debug.Log("----camera: " + camera.camera_name);
             base.DelayedInit(camera);
+            CameraManager.Instance.RegisterCameraBehavior(this);
         }
 
         protected override void OnGUI()
@@ -26,6 +33,8 @@ namespace AudienceSDK.Sample
 
         protected override void OnDestroy()
         {
+            Debug.Log("----OnDestruy: ");
+            CameraManager.Instance.UnregisterCameraBehavior(this);
             base.OnDestroy();
         }
         void Update()
@@ -55,7 +64,6 @@ namespace AudienceSDK.Sample
                 
                 //Debug.Log("ThirdPersonPos:"+ this.gameObject.transform.position);
             }
-            base.SetCameraBehavior(this.gameObject);
         }
     }
 }
