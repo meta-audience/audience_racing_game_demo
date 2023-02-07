@@ -105,6 +105,7 @@ namespace AudienceSDK {
             }
 
             this._cameraAvatarGO = GameObject.CreatePrimitive(avatarPrimitiveTypeType);
+            UnityEngine.Object.DestroyImmediate(this._cameraAvatarGO.GetComponent<Collider>());
             this._cameraAvatarGO.name = "CameraAvatar";
             UnityEngine.Object.DontDestroyOnLoad(this._cameraAvatarGO);
             this._cameraAvatarGO.SetActive(true);
