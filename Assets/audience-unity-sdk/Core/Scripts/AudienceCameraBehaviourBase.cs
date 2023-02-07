@@ -32,8 +32,6 @@ namespace AudienceSDK {
         private StreamState _streamState = StreamState.Unload;
         private SessionState _sessionState = SessionState.Inactive;
 
-        private GameObject ViewerCamera;
-
         public int MappingId {
             get {
                 return this._mappingId;
@@ -41,6 +39,10 @@ namespace AudienceSDK {
         }
 
         public int RenderFrames { get; set; } = 30;
+
+        public Vector3 SceneSettingEuler { get; private set; } = Vector3.zero;
+
+        public Vector3 SceneSettingPosition { get; private set; } = Vector3.zero;
 
         private float _accumulatedTime = 0.0f;
         private int _lastFrameCount = -1;
@@ -196,8 +198,8 @@ namespace AudienceSDK {
             gameObj.transform.localRotation = Quaternion.identity;
             gameObj.transform.localScale = Vector3.one;
 
-            this.transform.position = new Vector3(camera.position_x, camera.position_y, camera.position_z);
-            this.transform.eulerAngles = new Vector3(camera.rotation_x, camera.rotation_y, camera.rotation_z);
+            this.transform.eulerAngles = this.SceneSettingEuler = new Vector3(camera.rotation_x, camera.rotation_y, camera.rotation_z);
+            this.transform.position = this.SceneSettingPosition = new Vector3(camera.position_x, camera.position_y, camera.position_z);
 
             var cameraAvatarRoot = new GameObject();
             cameraAvatarRoot.transform.parent = this.transform;
