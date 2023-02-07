@@ -18524,7 +18524,7 @@ PrefabInstance:
     - target: {fileID: 1579282987822796750, guid: 941fac9249b6442cdb2d3f23472128e2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 80.96
+      value: 80.99
       objectReference: {fileID: 0}
     - target: {fileID: 1579282987822796750, guid: 941fac9249b6442cdb2d3f23472128e2,
         type: 3}
@@ -20580,8 +20580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ed5f266974ade41be6aa7bcd79417c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _followTarget: {fileID: 1207105319}
-  _relativePosition: {x: 0, y: 1, z: 0}
+  _followTarget: {fileID: 575510050}
+  _relativePosition: {x: 0, y: 1, z: -2}
   _followSpeed: 1
 --- !u!4 &1890840999
 Transform:
