@@ -1168,8 +1168,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _appliedAlgorithm: {fileID: 1890840998}
-  _disableGameObjects: []
-  _enableGameObjects: []
+  _disableColliders:
+  - {fileID: 120499502}
+  - {fileID: 942709332}
+  - {fileID: 1593189836}
+  - {fileID: 968865208}
+  - {fileID: 1478471721}
+  _enableColliders:
+  - {fileID: 533535045}
+  - {fileID: 2029148872}
+  - {fileID: 344886093}
+  - {fileID: 1146383585}
+  - {fileID: 1282276259}
 --- !u!65 &120499502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3458,8 +3468,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _appliedAlgorithm: {fileID: 2129625787}
-  _disableGameObjects: []
-  _enableGameObjects: []
+  _disableColliders:
+  - {fileID: 533535045}
+  - {fileID: 2029148872}
+  - {fileID: 344886093}
+  - {fileID: 1146383585}
+  - {fileID: 1282276259}
+  _enableColliders:
+  - {fileID: 120499502}
+  - {fileID: 942709332}
+  - {fileID: 1593189836}
+  - {fileID: 968865208}
+  - {fileID: 1478471721}
 --- !u!65 &344886093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5790,8 +5810,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _appliedAlgorithm: {fileID: 54513200}
-  _disableGameObjects: []
-  _enableGameObjects: []
+  _disableColliders:
+  - {fileID: 533535045}
+  - {fileID: 2029148872}
+  - {fileID: 344886093}
+  - {fileID: 1146383585}
+  - {fileID: 1282276259}
+  _enableColliders:
+  - {fileID: 120499502}
+  - {fileID: 942709332}
+  - {fileID: 1593189836}
+  - {fileID: 968865208}
+  - {fileID: 1478471721}
 --- !u!65 &533535045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9590,8 +9620,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _appliedAlgorithm: {fileID: 1890840998}
-  _disableGameObjects: []
-  _enableGameObjects: []
+  _disableColliders:
+  - {fileID: 120499502}
+  - {fileID: 942709332}
+  - {fileID: 1593189836}
+  - {fileID: 968865208}
+  - {fileID: 1478471721}
+  _enableColliders:
+  - {fileID: 533535045}
+  - {fileID: 2029148872}
+  - {fileID: 344886093}
+  - {fileID: 1146383585}
+  - {fileID: 1282276259}
 --- !u!65 &942709332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9934,8 +9974,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _appliedAlgorithm: {fileID: 1890840998}
-  _disableGameObjects: []
-  _enableGameObjects: []
+  _disableColliders:
+  - {fileID: 120499502}
+  - {fileID: 942709332}
+  - {fileID: 1593189836}
+  - {fileID: 968865208}
+  - {fileID: 1478471721}
+  _enableColliders:
+  - {fileID: 533535045}
+  - {fileID: 2029148872}
+  - {fileID: 344886093}
+  - {fileID: 1146383585}
+  - {fileID: 1282276259}
 --- !u!65 &968865208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11943,8 +11993,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _appliedAlgorithm: {fileID: 1497654678}
-  _disableGameObjects: []
-  _enableGameObjects: []
+  _disableColliders:
+  - {fileID: 533535045}
+  - {fileID: 2029148872}
+  - {fileID: 344886093}
+  - {fileID: 1146383585}
+  - {fileID: 1282276259}
+  _enableColliders:
+  - {fileID: 120499502}
+  - {fileID: 942709332}
+  - {fileID: 1593189836}
+  - {fileID: 968865208}
+  - {fileID: 1478471721}
 --- !u!65 &1146383585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12972,7 +13032,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207105314}
-  m_LocalRotation: {x: -0.018027125, y: -0.0000000132840805, z: -2.395127e-10, w: 0.9998375}
+  m_LocalRotation: {x: -0.018027132, y: 0.0000000067871246, z: 1.2237228e-10, w: 0.9998375}
   m_LocalPosition: {x: -44.06, y: 2.26, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -13379,8 +13439,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _appliedAlgorithm: {fileID: 698748574}
-  _disableGameObjects: []
-  _enableGameObjects: []
+  _disableColliders:
+  - {fileID: 533535045}
+  - {fileID: 2029148872}
+  - {fileID: 344886093}
+  - {fileID: 1146383585}
+  - {fileID: 1282276259}
+  _enableColliders:
+  - {fileID: 120499502}
+  - {fileID: 942709332}
+  - {fileID: 1593189836}
+  - {fileID: 968865208}
+  - {fileID: 1478471721}
 --- !u!65 &1282276259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15350,7 +15420,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389235981}
-  m_LocalRotation: {x: -0.018027125, y: -0.0000000132840805, z: -2.395127e-10, w: 0.9998375}
+  m_LocalRotation: {x: -0.018027132, y: 0.0000000067871246, z: 1.2237228e-10, w: 0.9998375}
   m_LocalPosition: {x: -44.06, y: 2.26, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16161,8 +16231,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _appliedAlgorithm: {fileID: 1890840998}
-  _disableGameObjects: []
-  _enableGameObjects: []
+  _disableColliders:
+  - {fileID: 120499502}
+  - {fileID: 942709332}
+  - {fileID: 1593189836}
+  - {fileID: 968865208}
+  - {fileID: 1478471721}
+  _enableColliders:
+  - {fileID: 533535045}
+  - {fileID: 2029148872}
+  - {fileID: 344886093}
+  - {fileID: 1146383585}
+  - {fileID: 1282276259}
 --- !u!65 &1478471721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17192,8 +17272,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _appliedAlgorithm: {fileID: 1890840998}
-  _disableGameObjects: []
-  _enableGameObjects: []
+  _disableColliders:
+  - {fileID: 120499502}
+  - {fileID: 942709332}
+  - {fileID: 1593189836}
+  - {fileID: 968865208}
+  - {fileID: 1478471721}
+  _enableColliders:
+  - {fileID: 533535045}
+  - {fileID: 2029148872}
+  - {fileID: 344886093}
+  - {fileID: 1146383585}
+  - {fileID: 1282276259}
 --- !u!65 &1593189836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21385,8 +21475,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _appliedAlgorithm: {fileID: 1040987515}
-  _disableGameObjects: []
-  _enableGameObjects: []
+  _disableColliders:
+  - {fileID: 533535045}
+  - {fileID: 2029148872}
+  - {fileID: 344886093}
+  - {fileID: 1146383585}
+  - {fileID: 1282276259}
+  _enableColliders:
+  - {fileID: 120499502}
+  - {fileID: 942709332}
+  - {fileID: 1593189836}
+  - {fileID: 968865208}
+  - {fileID: 1478471721}
 --- !u!65 &2029148872
 BoxCollider:
   m_ObjectHideFlags: 0
